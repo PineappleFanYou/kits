@@ -130,3 +130,22 @@ kits.saveData = function (key, arr) {
     //再存储到localStorage
     localStorage.setItem(key, jsonStr);
 }
+
+
+
+/**
+ * @description 封装计算购物车里面的商品总量的代码
+ * @param {key} 存储在本地数据的第一个值
+ * @return {} 返回商品的总的件数
+ */
+
+kits.total = function (key) {
+    //加载所有的数据
+    let arr = loadData(key)
+    //计算总件数
+    var total = 0;
+    arr.forEach(function (e) {
+        total += e.number;
+    });
+    return total;
+}
