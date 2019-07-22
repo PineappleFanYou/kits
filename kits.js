@@ -82,9 +82,9 @@ kits.remainder = function (n, m, k) {
 
 
 /**
- * 
- * 
- * 
+ * @description 封装一个可以生成唯一id 的方法
+ * @param {} 没有参数
+ * @return {} 随机生成一个6位数的随机id
  * 
  */
 
@@ -96,4 +96,22 @@ kits.primaryKey = function () {
     let r = kits.randomInt(100000, 999999);
     //把两个得到的结果，拼接起来
     return now + '' + r;
+}
+
+
+/**
+ * @description 读取存储在localStorage 里面的数组
+ * @param {string} key 存储数据使用的键
+ *  @return {Array} 返回值 返回一个数组， 如果不存在，返回空数组
+ */
+
+kits.loadData = function (key) {
+    let str = localStorage.getItem(key);
+    //转成字符串转成对象
+    let arr = JSON.parse(str);
+    //判断，如果没有，就给一个空数组，如果有，就返回一个数组
+    if (!arr) {
+        arr = [];
+    }
+    return arr;
 }
