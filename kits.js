@@ -149,3 +149,31 @@ kits.total = function (key) {
     });
     return total;
 }
+
+
+/**
+ * @description 计算总计里面的总数量和总价
+ * @param {Element1} 购物车里面的所有的复选框
+ * @param {Element2} 每种商品的div，整一条数据
+ * @param {dataId} 每种商品中数据中的自定义属性
+ * @param {Element3} 要修改的总数量
+ * @param {Element4} 要修改的总价
+ */
+kits.computedCountAndMoney = function (Element1, Element2, dataId, Element3, Element4) {
+    //算出总计里面的总数量和总价
+    //根据选中的多选框，得到选中的商品的id
+    let totalCount = 0;
+    let totalMoney = 0;
+    $(Element1).each((i, e) => {
+        let id = parseInt($(e).parents(Element2).attr(dataId));
+        arr.forEach(e => {
+            if (id === e.pID) {
+                //勾选在本地存储中的数据
+                totalCount += e.number;
+                totalMoney += e.number * e.price;
+            }
+        })
+    });
+    $(Element3).text(totalCount);
+    $(Element4).text(totalMoney);
+}
