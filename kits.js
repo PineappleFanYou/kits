@@ -115,3 +115,18 @@ kits.loadData = function (key) {
     }
     return arr;
 }
+
+
+/**
+ * @description 用于将数组存储到localStorage里面的方法
+ * @param {string} key 存储使用的键
+ * @param {Array} arr 要存储的数组数据
+ * @return {undefined}
+ */
+
+kits.saveData = function (key, arr) {
+    //先把数组转成字符串
+    let jsonStr = JSON.stringify(arr);
+    //再存储到localStorage
+    localStorage.setItem(key, jsonStr);
+}
