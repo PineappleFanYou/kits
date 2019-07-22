@@ -79,3 +79,21 @@ kits.remainder = function (n, m, k) {
     }
     return arr;
 }
+
+
+/**
+ * 
+ * 
+ * 
+ * 
+ */
+
+kits.primaryKey = function () {
+    //我们通过时间戳 + 大范围的随机数来生成id
+    //得到的是从1970年到现在为止的总的毫秒数
+    let now = Date.now();
+    //为了防止在1毫秒之内生成的id有多个，再次加上一个大范围的随机数
+    let r = kits.randomInt(100000, 999999);
+    //把两个得到的结果，拼接起来
+    return now + '' + r;
+}
