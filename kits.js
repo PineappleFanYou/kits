@@ -59,3 +59,23 @@ kits.times = function () {
     seconds = seconds < 10 ? '0' + seconds : seconds;
     return year + '-' + month + '-' + day + ' ' + hours + ':' + minutes + ':' + seconds;
 }
+
+
+
+/**
+ * @description 封装一个n-m之间，能被k整除的数
+ * @param {string} n 一个开始的数
+ * @param {string} m 一个结束的数
+ * @param {string} k 被模的数
+ * @return 返回所有能被k整除的所有的数
+ */
+kits.remainder = function (n, m, k) {
+    //声明一个空数组接收
+    let arr = [];
+    for (let i = n; i < m; i++) {
+        if (n % k) {
+            arr.push(i);
+        }
+    }
+    return arr;
+}
