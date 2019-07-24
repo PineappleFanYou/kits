@@ -201,3 +201,22 @@ kits.getUrlParams = function () {
     });
     return params;
 }
+
+
+
+
+/**
+ * @description 封装一个可以获得随机颜色
+ * @param {} 没有参数
+ * @return 返回随机一个rgb颜色
+ */
+
+kits.randomColor = function () {
+    //调用我们在17封装的随机整数，调用三次，得到3个随机整数
+    //生成3个随机[0,255]之间的随机整数
+    var r = randomInt(0, 255);
+    var g = randomInt(0, 255);
+    var b = randomInt(0, 255);
+    //拼接成rgb颜色
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
+}
