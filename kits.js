@@ -158,6 +158,7 @@ kits.total = function (key) {
  * @param {dataId} 每种商品中数据中的自定义属性
  * @param {Element3} 要修改的总数量
  * @param {Element4} 要修改的总价
+ * @return  返回一个总价
  */
 kits.computedCountAndMoney = function (Element1, Element2, dataId, Element3, Element4) {
     //算出总计里面的总数量和总价
@@ -176,4 +177,27 @@ kits.computedCountAndMoney = function (Element1, Element2, dataId, Element3, Ele
     });
     $(Element3).text(totalCount);
     $(Element4).text(totalMoney);
+}
+
+
+/**
+ * @description 返回一个数字的id
+ * @param {} 没有参数
+ * @return 返回一个对象
+ */
+
+kits.getUrlParams = function () {
+    //在ajax里面的url的参数是这样的： id = 10086&name=goudan&pwd=123
+    //我们要把url的参数 用 & 割开，  成为 [键=值，键=值...]
+    //在把数组里面的每个 键=值  再 割开， [键，值]
+    let arr = location.search.substring(1).split('&');
+    let params = {};
+    //遍历，把对象里面的每个元素用 '=' 分割
+    arr.forEach(e => {
+        let temp = e.split('=');
+        let key = temp[0];
+        let val = temp[1];
+        params[key] = val;
+    });
+    return params;
 }
