@@ -248,7 +248,7 @@ kits.randomColor = function () {
  */
 
 
-kits.randomIntSixteen = function () {
+kits.randomIntSixteen1 = function () {
     //用函数把这16个固定的字符，放到数组里面，随机取
     var r = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
     var s = '#';
@@ -259,4 +259,22 @@ kits.randomIntSixteen = function () {
         s = s + r[index];
     }
     return s;
+}
+
+
+
+/** 
+ * @description 封装一个随机16进制的颜色
+ * @param {} 没有参数
+ * @return 返回一个随机颜色
+ */
+
+kits.randomIntSixteen2 = function () {
+    // 随机0-15之间的整数，转换为16进制数字，再拼接为 颜色格式
+    var pin = '#';
+    for (var i = 0; i < 6; i++) {
+        var suiji = Math.floor(Math.random() * 16);
+        var pin = pin + suiji.toString(16);
+    }
+    return pin;
 }
