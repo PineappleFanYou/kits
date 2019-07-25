@@ -229,7 +229,7 @@ kits.randomColor = function () {
  */
 
 kits.randomColor = function () {
-    //调用我们在17封装的随机整数，调用三次，得到3个随机整数
+    //调用我们在17行封装的随机整数，调用三次，得到3个随机整数
     //生成3个随机[0,255]之间的随机整数
     var r = randomInt(0, 255);
     var g = randomInt(0, 255);
@@ -238,4 +238,25 @@ kits.randomColor = function () {
     var a = Math.floor(Math.random() * 100) / 100;
     //拼接成rgb颜色
     return 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')';
+}
+
+
+/**
+ * @description 封装一个随机16进制的颜色
+ * @param {} 没有参数
+ * @return 返回一个随机的颜色
+ */
+
+
+kits.randomIntSixteen = function () {
+    //用函数把这16个固定的字符，放到数组里面，随机取
+    var r = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+    var s = '#';
+    for (var i = 0; i < 6; i++) {
+        //随机取到一个0-f的东西，赋值给index
+        var index = Math.floor(Math.random() * r.length);
+        //这里是#rgbColor[第几个]
+        s = s + r[index];
+    }
+    return s;
 }
