@@ -278,3 +278,17 @@ kits.randomIntSixteen2 = function () {
     }
     return pin;
 }
+
+
+/**
+ *@description   逻辑或 的运算 （三个数相加）
+ * @param {a,b,c} 三个随机的数字
+ * @return 返回一个三个数的相加的值
+ */
+
+kits.getSum1 = function (a, b, c) {
+    a = a || 0;
+    b = b || 0;
+    c = c || 0;
+    return a + b + c;
+}
