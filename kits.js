@@ -300,6 +300,7 @@ kits.getSum1 = function (a, b, c) {
  * @param {arr} 一个数组
  * @param {b} 一个空数组，用于接收被筛选出的数字
  * @param {k} 一个数，作为筛选的条件
+ * @return 返回一个大于k所有的数字
  */
 
 kits.filtrate = function (arr, b, k) {
@@ -309,4 +310,21 @@ kits.filtrate = function (arr, b, k) {
         }
     }
     return b;
+}
+
+
+
+/**
+ * @description 遍历一个数组arr
+ * @param {arr} 一个数组
+ * @param {e,i} e 是 arr数组里面的每个元素，i是数组里面的索引
+ * @return 返回一个数组里面所有元素所有相加的和
+ */
+
+kits.traversal = function (arr, e, i) {
+    var sum = 0;
+    arr.forEach((e, i) => {
+        sum += e;
+    });
+    return sum;
 }
