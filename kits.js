@@ -292,3 +292,21 @@ kits.getSum1 = function (a, b, c) {
     c = c || 0;
     return a + b + c;
 }
+
+
+
+/**
+ * @description 把一个数组arr里面大于k的数字筛选出来，用空数组b接收
+ * @param {arr} 一个数组
+ * @param {b} 一个空数组，用于接收被筛选出的数字
+ * @param {k} 一个数，作为筛选的条件
+ */
+
+kits.filtrate = function (arr, b, k) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] > k) {
+            b.push(arr[i]);
+        }
+    }
+    return b;
+}
