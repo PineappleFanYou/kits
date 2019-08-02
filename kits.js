@@ -340,3 +340,15 @@ kits.insertArr = function (a) {
     arr.push(a);
     return arr;
 }
+
+
+/**
+ * @description 从元素的末尾拿出一个远胜于
+ * @param 没有参数  但是要主要：不管这个数组有多少个元素，它也只是那一个末尾的元素
+ * @return 被拿出来的原
+ */
+
+kits.takeArr = function () {
+    arr.pop();
+    return arr;
+}
