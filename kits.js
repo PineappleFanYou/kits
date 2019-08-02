@@ -343,12 +343,24 @@ kits.insertArr = function (a) {
 
 
 /**
- * @description 从元素的末尾拿出一个远胜于
+ * @description 从数组的末尾拿出一个元素
  * @param 没有参数  但是要主要：不管这个数组有多少个元素，它也只是那一个末尾的元素
  * @return 被拿出来的原
  */
 
 kits.takeArr = function () {
     arr.pop();
+    return arr;
+}
+
+
+/**
+ *@description 翻转数组元素
+ * @param 没有参数
+ * @returns 返回一个被翻转的数组
+ */
+
+kits.reverseArr = function () {
+    arr.reverse();
     return arr;
 }
