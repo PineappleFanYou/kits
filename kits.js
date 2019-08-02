@@ -303,7 +303,7 @@ kits.getSum1 = function (a, b, c) {
  * @return 返回一个大于k所有的数字
  */
 
-kits.filtrate = function (arr, b, k) {
+kits.filtrate1 = function (arr, b, k) {
     for (var i = 0; i < arr.length; i++) {
         if (arr[i] > k) {
             b.push(arr[i]);
@@ -327,4 +327,16 @@ kits.traversal = function (arr, e, i) {
         sum += e;
     });
     return sum;
+}
+
+
+/**
+ *@description  把一个多个元素从数组的末尾插入
+ * @param {string} a 一个你想要插入数组的东西
+ * @return 返回一个数组的新长度
+ */
+
+kits.insertArr = function (a) {
+    arr.push(a);
+    return arr;
 }
