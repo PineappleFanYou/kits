@@ -387,7 +387,21 @@ kits.separator = function(a) {
 
 kits.separatorArr = function(a) {
     //演示
-    var e = '1,2,3,4,5,6';  /* 没有[]才是数组。['1,2,3,4,5'],这个是数组，只不过里面的是字符串而已 */
-   var f = e.split('a');
-   console.log(f);  /* 输出["1", "2", "3", "4", "5", "6"] 输出有[]的数组 */
+    // var e = '1,2,3,4,5,6';  /* 没有[]才是数组。['1,2,3,4,5'],这个是数组，只不过里面的是字符串而已 */
+   e.split('a');
+//    console.log(f);  /* 输出["1", "2", "3", "4", "5", "6"] 输出有[]的数组 */
 }
+
+
+
+/**
+ * @description 把一个或者多个元素从数组的前面插入
+ * @param {string} e123 多个要插入的元素
+ * @param {string} arr 一个数组
+ * @return 返回一个新的数组的长度
+ */
+
+ kits.beforeInsert = function(e1,e2,e3) {
+     arr.unshift(e1,e2,e3);
+     return arr;
+ }
