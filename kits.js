@@ -376,3 +376,18 @@ kits.separator = function(a) {
     arr.join('a');
     return arr;
 }
+
+
+/**
+ *@description 根据一个指定的分隔符，把字符串，切割成为数组
+ * @param {string} a 指定的分隔符
+ * @returns 是一个数组
+ * 
+*/
+
+kits.separatorArr = function(a) {
+    //演示
+    var e = '1,2,3,4,5,6';  /* 没有[]才是数组。['1,2,3,4,5'],这个是数组，只不过里面的是字符串而已 */
+   var f = e.split('a');
+   console.log(f);  /* 输出["1", "2", "3", "4", "5", "6"] 输出有[]的数组 */
+}
