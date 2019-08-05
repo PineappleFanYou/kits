@@ -364,3 +364,15 @@ kits.reverseArr = function () {
     arr.reverse();
     return arr;
 }
+
+
+/**
+ * @description 把一个数组，用指定的分隔符，拼接成为一个字符串
+ * @param {string} a 是一个分隔符
+ * @returns 返回一个字符串
+*/
+
+kits.separator = function(a) {
+    arr.join('a');
+    return arr;
+}
