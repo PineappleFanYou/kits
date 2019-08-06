@@ -434,3 +434,17 @@ kits.replaceArr = function(index,howmany,e1,e2) {
     return arr;
 }
 
+
+
+/**
+ * @description 查找某个字符在一个字符串中的位置
+ * @param {string} char 目标字符
+ * @param {string} fromIndex 从哪里开始查找
+ * @returns 整数，如果是-1 代表没有，否则有，有就是返回某个字符所在的位置
+*/
+
+kits.findChar = function(char,fromIndex) {
+    str.indexOf(char,fromIndex);
+    return str;
+}
+
