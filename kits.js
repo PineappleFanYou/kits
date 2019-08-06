@@ -405,3 +405,16 @@ kits.separatorArr = function(a) {
      arr.unshift(e1,e2,e3);
      return arr;
  }
+
+
+ /**
+  * @description 从数组的最前面把一个元素取出来
+  * @param {string} 没有参数
+  * @returns 被从前面移除的元素
+*/
+
+kits.beforeRemove = function() {
+    arr.shift();
+    return arr;
+}
+ 
