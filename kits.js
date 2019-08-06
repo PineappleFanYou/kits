@@ -418,3 +418,19 @@ kits.beforeRemove = function() {
     return arr;
 }
  
+
+
+/**
+ * @description 可以用于 插入 删除 替换数组中元素
+ * @param {string} index 从哪里开始操作
+ * @param {string} howmany 总共操作多少个元素
+ * @param {string} e1 用于插入或者是替换的新的元素
+ * @param {string} e2 用于插入或者是替换的新的元素
+ * @returns 返回一个新的数组
+*/
+
+kits.replaceArr = function(index,howmany,e1,e2) {
+    arr.splice(index,howmany,e1,e2);
+    return arr;
+}
+
