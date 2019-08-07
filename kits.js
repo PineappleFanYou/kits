@@ -463,14 +463,23 @@ kits.findChar = function(char,fromIndex) {
  }
 
 
-
  /**
   * @description 向上去整数
   * @param {string} x 一个数字
   * @returns 大于等于x的最小的整数
  */
 
-
  kits.upwardInteger = function (x) {
     return Math.ceil(x);
  }
+
+
+ /**
+  * @description 把数字四舍五入
+  * @param {string} x 一个数字
+  * @returns 把数字四舍五入之后的整数
+ */
+
+kits.roundOff = function(x) {
+    return Math.round(x);
+}
