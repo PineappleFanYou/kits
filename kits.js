@@ -461,3 +461,16 @@ kits.findChar = function(char,fromIndex) {
     '字符串'.substring(start,end);
     return '指定位置之间的字符'
  }
+
+
+
+ /**
+  * @description 向上去整数
+  * @param {string} x 一个数字
+  * @returns 大于等于x的最小的整数
+ */
+
+
+ kits.upwardInteger = function (x) {
+    return Math.ceil(x);
+ }
