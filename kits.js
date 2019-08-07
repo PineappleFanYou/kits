@@ -464,13 +464,17 @@ kits.findChar = function(char,fromIndex) {
 
 
  /**
-  * @description 向上去整数
-  * @param {string} x 一个数字
-  * @returns 大于等于x的最小的整数
+  * @description 根据 precision（精度） 向上舍入 number。（ precision（精度）可以理解为保留几位小数。）
+  * @param {string}number (number): 要向上舍入的值
+  * @param {string} [precision] (number): 向上舍入的的精度 ,这个精度可选可不选
+  * @returns 返回向上舍入的值
  */
 
- kits.upwardInteger = function (x) {
-    return Math.ceil(x);
+ kits.upwardInteger = function (number,[precision]) {
+    return Math.ceil(number,[precision]);
+    //例如：
+    // Math.ceil(4.006);   得到的是5
+    // Math.ceil(6.004,2);  得到的是  6.01   这里的精度是2位小数
  }
 
 
