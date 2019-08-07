@@ -448,3 +448,16 @@ kits.findChar = function(char,fromIndex) {
     return str;
 }
 
+
+
+/**
+ * @description  用来截取字符串的一部分
+ * @param {string} start 从哪里开始
+ * @param {string} end 到哪里结束，注意，这个end是获取不到的，如果就是要，请+1，如果省略end，默认是字符串的最末尾
+ * @returns 指定位置之间的字符
+ */
+
+ kits.cutOut = function(start,end) {
+    '字符串'.substring(start,end);
+    return '指定位置之间的字符'
+ }
