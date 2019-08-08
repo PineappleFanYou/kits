@@ -487,3 +487,15 @@ kits.findChar = function(char,fromIndex) {
 kits.roundOff = function(x) {
     return Math.round(x);
 }
+
+
+/**
+ * @description 两个数相加
+ * @param {string} number1 相加的第一个数
+ * @param {string} number2 相加的第二个数
+ * @returns 返回总和
+*/
+
+kits.addMethods = function(number1,number2) {
+    return Math.add(number1,number2);
+}
