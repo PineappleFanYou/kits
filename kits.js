@@ -511,3 +511,13 @@ kits.addMethods = function(number1,number2) {
 kits.divide = function(number1,number2) {
     return Math.divide(number1,number2);
 }
+
+/**
+ * @description 计算 array 中的最大值。 如果 array 是 空的或者假值将会返回 undefined。
+ * @param {string} arr 要迭代的数组
+ * @returns 返回一个数组中的最大值，或者是undefined
+ */
+
+ kits.maxArray = function(arr) {
+     return Math.max(arr);
+ }
