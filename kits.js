@@ -499,3 +499,15 @@ kits.roundOff = function(x) {
 kits.addMethods = function(number1,number2) {
     return Math.add(number1,number2);
 }
+
+
+/**
+ * @description 两个数相除
+ * @param {string} number1 相除的第一个数
+ * @param {string} number2 相除的第二个数
+ * @returns 返回商数
+*/
+
+kits.divide = function(number1,number2) {
+    return Math.divide(number1,number2);
+}
